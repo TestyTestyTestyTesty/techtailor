@@ -1,5 +1,5 @@
 import React, { useId } from "react";
-import { prefixZeroBeforeNumber } from "../../lib/indexNumber";
+import { prefixZeroBeforeNumber } from "../../utils/indexNumber";
 import Container from "../Containers/Container";
 import Step from "../Step/Step";
 import {

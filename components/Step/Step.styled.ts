@@ -13,11 +13,11 @@ export const StepNumberStyles = styled.span`
     font-size: 120px;
     line-height: 94px;
     text-align: center;
-    background: rgb(255, 60, 46, 1);
+    background: ${({ theme }) => theme.textColor};
     background: -webkit-linear-gradient(
         90deg,
-        rgba(9, 7, 17, 1) 0%,
-        rgba(255, 60, 46, 1) 100%
+        ${({ theme }) => theme.bgColor} 0%,
+        ${({ theme }) => theme.accentColor1} 100%
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -29,7 +29,7 @@ export const StepHeadingStyles = styled.h3`
     font-size: 32px;
     line-height: 38px;
     text-align: center;
-    color: #ffffff;
+    color: ${({ theme }) => theme.textColor};
     margin: 0 0 16px;
 `;
 
@@ -41,6 +41,6 @@ export const StepParagraphStyles = styled.p`
     line-height: 28px;
     text-align: center;
     letter-spacing: 0.5px;
-    color: #ffffff;
+    color: ${({ theme }) => theme.textColor};
     margin: 0 0 32px;
 `;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StepsWrapperStyles = styled.div`
-    background: #08070f;
+    background: ${({ theme }) => theme.bgColor};
     padding: 27px 0;
 `;
 export const StepsTitleStyles = styled.h2`
@@ -12,7 +12,7 @@ export const StepsTitleStyles = styled.h2`
     line-height: 70px;
     margin: 0 0 16px;
     text-align: center;
-    color: #ffffff;
+    color: ${({ theme }) => theme.textColor};
 `;
 export const StepsParagraphStyles = styled.h2`
     font-family: "Roobert TRIAL";
@@ -24,5 +24,5 @@ export const StepsParagraphStyles = styled.h2`
     margin: 0 auto 98px;
     text-align: center;
     letter-spacing: 0.5px;
-    color: #ffffff;
+    color: ${({ theme }) => theme.textColor};
 `;

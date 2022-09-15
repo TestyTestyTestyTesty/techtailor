@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HeaderWrapperStyles = styled.div`
-    background: #08070f;
+    background: ${({ theme }) => theme.bgColor};
     padding: 27px 0;
 `;
 export const HeaderInnerStyles = styled.div`

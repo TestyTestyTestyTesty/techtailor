@@ -25,7 +25,7 @@ export const TopBarParagraphStyles = styled.p`
     line-height: 28px;
     text-align: center;
     letter-spacing: 0.5px;
-    color: #ffffff;
+    color: ${({ theme }) => theme.textColor};
     margin: 0 16px 0 0;
 `;
 export const TopBarLinkStyles = styled.a`
@@ -36,5 +36,5 @@ export const TopBarLinkStyles = styled.a`
     line-height: 16px;
     letter-spacing: 0.1em;
     text-decoration-line: underline;
-    color: #ffffff;
+    color: ${({ theme }) => theme.textColor};
 `;

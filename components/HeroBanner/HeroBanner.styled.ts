@@ -19,7 +19,7 @@ export const HeroHeadingStyles = styled.h1`
     font-weight: 400;
     font-size: 64px;
     line-height: 70px;
-    color: #ffffff;
+    color: ${({ theme }) => theme.textColor};
     margin: 0 0 16px;
     max-width: 70%;
 `;
@@ -31,7 +31,7 @@ export const HeroParagraphStyles = styled.p`
     font-size: 24px;
     line-height: 40px;
     letter-spacing: 0.5px;
-    color: #ffffff;
+    color: ${({ theme }) => theme.textColor};
     max-width: 50%;
     margin: 0 0 40px;
 `;
