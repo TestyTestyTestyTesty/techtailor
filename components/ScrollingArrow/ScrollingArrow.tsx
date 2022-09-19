@@ -1,10 +1,13 @@
 import Image from "next/image";
 import React from "react";
-import { ScrollingArrowWrapperStyles } from "./ScrollingArrow.styled";
+import {
+    HeroBannerArrowStyles,
+    ScrollingArrowStyles,
+} from "./ScrollingArrow.styled";
 
-export default function ScrollingArrow() {
+export default function ScrollingArrow({ className }: any) {
     return (
-        <ScrollingArrowWrapperStyles>
+        <ScrollingArrowStyles className={className}>
             <Image
                 src="/assets/arrow-orange.svg"
                 alt="scroll to next section"
@@ -13,6 +16,6 @@ export default function ScrollingArrow() {
                 width="39"
                 priority
             />
-        </ScrollingArrowWrapperStyles>
+        </ScrollingArrowStyles>
     );
 }

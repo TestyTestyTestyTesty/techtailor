@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styled, { keyframes } from "styled-components";
 
 const rotate = keyframes`
@@ -13,16 +14,20 @@ const rotate = keyframes`
     transform: translateY(0);
   }
 `;
-export const ScrollingArrowWrapperStyles = styled.div`
+export const ScrollingArrowStyles = styled.div`
     display: flex;
     align-self: center;
     cursor: pointer;
     animation: ${rotate} 2s linear infinite;
+    text-align: center;
+    width: 36px;
+    height: 39px;
+`;
+
+export const HeroBannerArrowStyles = styled(ScrollingArrowStyles)`
     position: absolute;
     bottom: 5%;
     right: 0;
     left: 0;
     margin: auto;
-    text-align: center;
-    width: 36px;
 `;

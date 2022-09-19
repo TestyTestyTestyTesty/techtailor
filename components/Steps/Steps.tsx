@@ -1,15 +1,14 @@
 import React, { useId } from "react";
-import { prefixZeroBeforeNumber } from "../../utils/indexNumber";
 import Container from "../Containers/Container";
-import Step from "../Step/Step";
+import SliderNavigation from "../SliderNavigation/SliderNavigation";
 import {
     StepsParagraphStyles,
     StepsTitleStyles,
     StepsWrapperStyles,
 } from "./Steps.styled";
+import StepsCarousel from "./StepsCarousel/StepsCarousel";
 
 export default function Steps() {
-    const id = useId();
     const steps = [
         {
             title: "Apps development",
@@ -53,17 +52,7 @@ export default function Steps() {
                     Scaleups in different dimentions. See how we can help you
                     advance your business.
                 </StepsParagraphStyles>
-                {steps.map((step, index) => {
-                    return (
-                        <Step
-                            key={`${id}-${index}`}
-                            number={prefixZeroBeforeNumber(index)}
-                            title={step.title}
-                            text={step.text}
-                            link={step.link}
-                        />
-                    );
-                })}
+                <StepsCarousel steps={steps} />
             </Container>
         </StepsWrapperStyles>
     );

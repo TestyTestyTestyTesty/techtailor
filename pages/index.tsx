@@ -2,17 +2,14 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { useMediaQuery } from "react-responsive";
 import ApplyNow from "../components/ApplyNow/ApplyNow";
-import Button from "../components/Button/Button";
-import HeaderDesktop from "../components/Header/desktop/Header";
 import Header from "../components/Header/Header";
-import HeaderMobile from "../components/Header/mobile/Header";
 import HeroBanner from "../components/HeroBanner/HeroBanner";
+import SpinningWheel from "../components/SpinningWheel/SpinningWheel";
 import Steps from "../components/Steps/Steps";
 import TopBar from "../components/TopBar/TopBar";
 import styles from "../styles/Home.module.scss";
 
 const Home: NextPage = () => {
-    const isLg = useMediaQuery({ query: "(min-width: 992px)" });
     return (
         <div>
             <Head>
@@ -25,15 +22,16 @@ const Home: NextPage = () => {
             </Head>
 
             <main className={styles.main}>
-                <Header />
-                {/*                 <TopBar
+                <TopBar
                     text="We have 100+ open positions"
                     linkText="Join Us"
                     linkHref="#career"
                 />
+                <Header />
                 <HeroBanner />
-                <Steps /> 
-                <ApplyNow />*/}
+                <Steps />
+                <ApplyNow />
+                <SpinningWheel />
             </main>
         </div>
     );

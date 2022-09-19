@@ -4,16 +4,12 @@ import HeaderDesktop from "./desktop/Header";
 import HeaderMobile from "./mobile/Header";
 
 export default function Header() {
-    const [isDesktop, setDesktop] = useState<boolean | null>(null);
-
-    const updateMedia = () => {
-        setDesktop(window.innerWidth > 992);
-    };
-
+    const [isClient, setIsClient] = useState(false);
+    const isDesktop = useMediaQuery({ query: "(min-width: 992px)" });
     useEffect(() => {
-        updateMedia();
-        window.addEventListener("resize", updateMedia);
-        return () => window.removeEventListener("resize", updateMedia);
-    });
-    return <>{isDesktop ? <HeaderDesktop /> : <HeaderMobile />}</>;
+        if (typeof window !== undefined) {
+            setIsClient(true);
+        }
+    }, []);
+    return <>{isClient && isDesktop ? <HeaderDesktop /> : <HeaderMobile />}</>;
 }

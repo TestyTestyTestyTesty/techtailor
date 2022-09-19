@@ -37,5 +37,6 @@ export const ButtonStyles = styled.button<Props>`
 `;
 
 export const ButtonBorderStyles = styled(ButtonStyles)`
-    border: 2px solid ${({ theme }) => theme.bgColor};
+    border: 2px solid ${({ theme }) => theme.bgColorInverted};
+    background: none;
 `;
