@@ -14,7 +14,6 @@ export const NavLinkStyles = styled.a<Props>`
     cursor: pointer;
     position: relative;
     white-space: nowrap;
-    ${({ open }) => (open ? "visible" : "hidden")};
     &:hover {
         outline: none;
         &:before {

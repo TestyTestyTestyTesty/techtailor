@@ -1,5 +1,5 @@
 export interface SliderNavigationInterface {
     slidesNum?: number;
-    prevRef?: any;
-    nextRef?: any;
+    onPrevClick: ()=>void
+    onNextClick:()=>void
 }

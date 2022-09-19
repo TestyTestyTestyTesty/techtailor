@@ -9,12 +9,14 @@ import { SliderNavigationInterface } from "./SliderNavigationInterafce";
 
 export default function SliderNavigation({
     slidesNum,
+    onPrevClick,
+    onNextClick
 }: SliderNavigationInterface) {
     return (
         <SliderNavigationWrapperStyles>
-            <ArrowLeftStyles />
+            <ArrowLeftStyles onClick={onPrevClick}/>
             <SliderPagination slidesNum={slidesNum} />
-            <ArrowRightStyles />
+            <ArrowRightStyles onClick={onNextClick}/>
         </SliderNavigationWrapperStyles>
     );
 }

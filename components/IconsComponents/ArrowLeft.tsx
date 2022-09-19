@@ -1,6 +1,8 @@
-import React from "react";
+import {forwardRef, Ref, SVGProps} from "react";
 
-const ArrowLeft = React.forwardRef((props, ref) => {
+
+const ArrowLeft = forwardRef((  props: SVGProps<SVGSVGElement>,
+    ref: Ref<SVGSVGElement>) => {
     return (
         <svg
             ref={ref}
@@ -14,4 +16,5 @@ const ArrowLeft = React.forwardRef((props, ref) => {
         </svg>
     );
 });
+
 export default ArrowLeft;

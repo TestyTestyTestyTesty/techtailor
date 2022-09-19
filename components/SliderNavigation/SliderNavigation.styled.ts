@@ -2,7 +2,11 @@ import { mediaQueries } from "../../styles/mediaQueries";
 import styled from "styled-components";
 import ArrowLeft from "../../public/assets/arrow-left.svg";
 import ArrowRight from "../../public/assets/arrow-right.svg";
-export const SliderNavigationWrapperStyles = styled.div``;
+export const SliderNavigationWrapperStyles = styled.div`
+display:flex
+align-items:center
+justify-content:center;
+`;
 
 export const ArrowLeftStyles = styled(ArrowLeft)`
     cursor: pointer;
