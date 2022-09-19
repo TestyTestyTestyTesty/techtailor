@@ -5,7 +5,7 @@ export interface StepInterface {
     text: string;
     activeSlide: number;
     link?: {
-        href: string;
-        text: string;
+        href?: string;
+        text?: string;
     };
 }

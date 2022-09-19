@@ -60,7 +60,7 @@ export const StepParagraphStyles = styled.p<Props>`
     pointer-events: ${({ isActive }) => (isActive ? "auto" : "none")};
 `;
 
-export const ButtonStyles = styled<Props>(ButtonBorderStyles)`
+export const ButtonStyles = styled(ButtonBorderStyles)<Props>`
     opacity: ${({ isActive }) => (isActive ? 1 : 0)};
     pointer-events: ${({ isActive }) => (isActive ? "auto" : "none")};
 `;
